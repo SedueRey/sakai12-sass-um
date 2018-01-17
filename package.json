@@ -1,0 +1,58 @@
+{
+  "name": "Sakai12-morpheus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "nameclean": "morpheus12x",
+  "paths": {
+    "src": {
+      "base": "./morpheus-master/",
+      "scss": "./morpheus-master/sass/",
+      "js": "./morpheus-master/js/",
+      "images": "./morpheus-master/images",
+      "svg": "./assets/icons"
+    },
+    "dist": {
+      "base": "C:\\ev\\s\\tomcat-8.5.20-12x\\webapps\\library\\skin\\morpheus-default\\",
+      "css": "C:\\ev\\s\\tomcat-8.5.20-12x\\webapps\\library\\skin\\morpheus-default\\",
+      "js": "C:\\ev\\s\\tomcat-8.5.20-12x\\webapps\\library\\skin\\morpheus-default\\js\\",
+      "images": "C:\\ev\\s\\tomcat-8.5.20-12x\\webapps\\library\\skin\\morpheus-default\\images",
+      "svg": "../lowgolf-theme/img/"
+    },
+    "publish": {
+      "base": "../../lowgolf/wp-content/themes",
+      "theme": "../../lowgolf/wp-content/themes/lowgolf-theme"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Eduardo - Sedue - Rey",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.3.7",
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.13.0",
+    "browserify": "^14.4.0",
+    "child_process": "^1.0.2",
+    "fancy-log": "^1.3.0",
+    "gulp": "^3.9.1",
+    "gulp-buffer": "0.0.2",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect-php": "0.0.7",
+    "gulp-postcss": "^6.1.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-svg-sprites": "^4.1.2",
+    "gulp-tap": "^1.0.1",
+    "gulp-uglify": "^3.0.0"
+  },
+  "dependencies": {
+    "normalize-scss": "^7.0.0",
+    "sass-flex-mixin": "^1.0.3"
+  }
+}
