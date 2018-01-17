@@ -20,11 +20,25 @@ $more-sites-single-column: "only screen and (max-width : #{$break-more-sites-sin
 
 /* Typography*/
 
+@font-face {
+    font-family: system;
+    font-style: normal;
+    font-weight: 400;
+    src: local(".SFNSText"), 
+         local(".HelveticaNeueDeskInterface"), 
+         local(".LucidaGrandeUI"), 
+         local("Ubuntu"), 
+         local("Segoe UI"), 
+         local("Roboto"), 
+         local("DroidSans"), 
+         local("Tahoma");
+}
+
 //Google family Fonts URL
-$font-family-url: "//fonts.googleapis.com/css?family=Open Sans:400,500,700" !default;
+//$font-family-url: "//fonts.googleapis.com/css?family=Open Sans:400,500,700" !default;
 
 //Typography variables
-$font-family: "Open Sans", sans-serif !default;
+$font-family: "system", sans-serif !default;
 $default-font-size: 14px !default;
 $default-font-weight: 400 !default;										// 400 or 700 as you wish
 $header-font-family: $font-family;
@@ -32,7 +46,8 @@ $header-font-weight: 700 !default;										// 400 or 700 as you wish
 
 /* Color palette */
 $background-color: 			 #FFFFFF !default;
-$background-color-secondary: #3949AB !default;
+//$background-color-secondary: #c62828 !default;
+$background-color-secondary: #9d4444 !default;
 
 $primary-color:    			 #265b81 !default;
 $primary-color-highContrast: darken( $primary-color, 4% ) !default;	// for use of primary on non-white light backgrounds, such as greys
@@ -41,6 +56,9 @@ $secondary-color:  			 #F00 !default;
 $alt-colour: 				 #d36f00 !default;
 
 $text-color:				 #212121 !default;
+
+$btn-color-um: #7cacbc;
+$umu-sitenav-width: 20rem;
 
 $body-background-color: #FAFAFA !default;
 
@@ -63,16 +81,16 @@ $tool-tab-border-color:                                   #E5E5E5 !default;
 $tool-tab-hover-text-color:                               #191919 !default;
 $tool-tab-hover-background-color:                         #ECECEC !default;
 $tool-tab-hover-highlight-color:                          #7F7F7F !default;
-$tool-tab-active-text-color:                              #15597e !default;
+$tool-tab-active-text-color:                              $btn-color-um !default;
 $tool-tab-active-text-size:                               12.5px !default;
 $tool-tab-active-background-color:                        #FFFFFF !default;
-$tool-tab-active-highlight-color:                         #15597e !default;
+$tool-tab-active-highlight-color:                         $btn-color-um !default;
 
 $tool-nav-link-color: #666 !default;
 
 $main-content-background: $background-color !default;
 $top-header-background: $background-color-secondary !default;
-$sites-nav-background: $tool-menu-background-color !default;
+$sites-nav-background: $background-color-secondary !default;
 
 $breadcrumbs-color:			 $text-color !default;
 $breadcrumbs-tool-color:		 #265b81 !default;
@@ -93,14 +111,14 @@ $button-background-color: #F0F0F0 !default;
 $button-background-secondary-color: #FFF !default;
 /* General button colors */
 $button-color-text-color: #FFF !default;
-$button-color-border-color: #326B97 !default;
+$button-color-border-color: darken($btn-color-um, 10%) !default;
 $button-color-background-color: #176691 !default;
 $button-color-background-secondary-color: #FAFAFA !default;
 
 $button-radius:                                           3px !default;
 $button-text-transform:                                   none !default;
 $button-primary-text-color:                               $button-color-text-color !default;
-$button-primary-background-color:                         #15597e !default;
+$button-primary-background-color:                         $btn-color-um !default;
 $button-primary-border-color:                             $button-color-border-color !default;
 $button-primary-hover-text-color:                         #FFFFFF !default;
 $button-primary-hover-background-color:                   $button-color-background-color !default;
@@ -143,37 +161,37 @@ $topNav-text-alt-color:                     #ccc !default;
 
 /* Favorites */ 
 /* Favorites - item */
-$sites-nav-menu-item-background:            #FFFFFF !default;
-$sites-nav-menu-item-color:                 #4C4C4C !default;
-$sites-nav-menu-item-icon-color:            #666666 !default;
-$sites-nav-menu-item-border-color:          #E5E5E5 !default;
-$sites-nav-menu-item-border-top:            1px solid $sites-nav-menu-item-border-color !default;
-$sites-nav-menu-item-border-right:          $sites-nav-menu-item-border-top !default;
-$sites-nav-menu-item-border-bottom:         $sites-nav-menu-item-border-top !default;
-$sites-nav-menu-item-border-left:           $sites-nav-menu-item-border-top !default;
+$sites-nav-menu-item-background:            $background-color-secondary !default;
+$sites-nav-menu-item-color:                 #F0F0F0 !default;
+$sites-nav-menu-item-icon-color:            #F0F0F0 !default;
+$sites-nav-menu-item-border-color:          $background-color-secondary !default;
+$sites-nav-menu-item-border-top:            0px none !default;
+$sites-nav-menu-item-border-right :         0px none !default;
+$sites-nav-menu-item-border-bottom :        1px solid #772d2d !default;
+$sites-nav-menu-item-border-left :          0px none !default;
 /* Favorites - item hovered */
-$sites-nav-menu-item-hover-background:      #FFFFFF !default;
-$sites-nav-menu-item-hover-color:           #191919 !default;
-$sites-nav-menu-item-hover-icon-color:      #424242 !default;
-$sites-nav-menu-item-hover-border-color:    #7F7F7F !default;
-$sites-nav-menu-item-hover-border-top:      1px solid $sites-nav-menu-item-hover-border-color !default;
+$sites-nav-menu-item-hover-background :     #772d2d !default;
+$sites-nav-menu-item-hover-color:           #F0F0F0 !default;
+$sites-nav-menu-item-hover-icon-color:      #F0F0F0 !default;
+$sites-nav-menu-item-hover-border-color :   #772d2d !default;
+$sites-nav-menu-item-hover-border-top:      0px none$sites-nav-menu-item-hover-border-color !default;
 $sites-nav-menu-item-hover-border-right:    $sites-nav-menu-item-hover-border-top !default;
-$sites-nav-menu-item-hover-border-bottom:   $sites-nav-menu-item-hover-border-top !default;
+$sites-nav-menu-item-hover-border-bottom:   1px solid #772D2D !default;
 $sites-nav-menu-item-hover-border-left:     $sites-nav-menu-item-hover-border-top !default;
 /* Favorites - item selected */
-$sites-nav-menu-item-selected-background:   #15597e !default;
+$sites-nav-menu-item-selected-background:   #772d2d !default;
 $sites-nav-menu-item-selected-color:        #FFFFFF !default;
 $sites-nav-menu-item-selected-icon-color:   #FFFFFF !default;
-$sites-nav-menu-item-selected-border-color: #326B97 !default;
-$sites-nav-menu-item-selected-border-top:   1px solid $sites-nav-menu-item-selected-border-color !default;
-$sites-nav-menu-item-selected-border-right: $sites-nav-menu-item-selected-border-top !default;
-$sites-nav-menu-item-selected-border-bottom:$sites-nav-menu-item-selected-border-top !default;
-$sites-nav-menu-item-selected-border-left:  $sites-nav-menu-item-selected-border-top !default;
+$sites-nav-menu-item-selected-border-color: darken($btn-color-um, 10%) !default;
+$sites-nav-menu-item-selected-border-top:   1px solid #772d2d !default;
+$sites-nav-menu-item-selected-border-right: 1px solid #772d2d !default;
+$sites-nav-menu-item-selected-border-bottom:1px solid #772d2d !default;
+$sites-nav-menu-item-selected-border-left : 1px solid #772d2d !default;
 /* Favorites - item selected and hovered */
-$sites-nav-menu-item-selected-hover-background:   #15597e !default;
+$sites-nav-menu-item-selected-hover-background:   $btn-color-um !default;
 $sites-nav-menu-item-selected-hover-color:        #FFFFFF !default;
 $sites-nav-menu-item-selected-hover-icon-color:   #FFFFFF !default;
-$sites-nav-menu-item-selected-hover-border-color: #326B97 !default;
+$sites-nav-menu-item-selected-hover-border-color: darken($btn-color-um, 10%) !default;
 $sites-nav-menu-item-selected-hover-border-top:   1px solid $sites-nav-menu-item-selected-hover-border-color !default;
 $sites-nav-menu-item-selected-hover-border-right: $sites-nav-menu-item-selected-hover-border-top !default;
 $sites-nav-menu-item-selected-hover-border-bottom:$sites-nav-menu-item-selected-hover-border-top !default;
@@ -261,7 +279,7 @@ $all-sites-close-action-hover-color:                      #4C4C4C !default;
 
 /* Wide tool menu, icons on left */
 $tool-menu-icon-on-left: true !default;
-$tool-menu-width: 200px !default;
+$tool-menu-width: 180px !default;
 $tool-menu-width-collapsed: $tool-menu-width / 4 !default;
 
 /* Narrow tool menu, icons centered */
@@ -288,32 +306,32 @@ $tool-menu-item-hidden-hover-color:                        #808080 !default;
 $tool-menu-item-hidden-hover-icon-color:                   #929292 !default;
 $tool-menu-item-hidden-hover-background-color:             #ECECEC !default;
 $tool-menu-item-hidden-hover-border-left:                  4px solid #7F7F7F !default;
-$tool-menu-item-selected-text-color:                       #15597e !default;
-$tool-menu-item-selected-icon-color:                       #15597e !default;
+$tool-menu-item-selected-text-color:                       $background-color-secondary !default;
+$tool-menu-item-selected-icon-color:                       $background-color-secondary !default;
 $tool-menu-item-selected-background-color:                 #FFFFFF !default;
-$tool-menu-item-selected-border-left:                      4px solid #15597e !default;
-$tool-menu-item-selected-hover-text-color:                 #15597e !default;
-$tool-menu-item-selected-hover-icon-color:                 #15597e !default;
+$tool-menu-item-selected-border-left :                     4px solid $sites-nav-menu-item-selected-background !default;
+$tool-menu-item-selected-hover-text-color:                 $background-color-secondary !default;
+$tool-menu-item-selected-hover-icon-color:                 $background-color-secondary !default;
 $tool-menu-item-selected-hover-background-color:           #FFFFFF !default;
-$tool-menu-item-selected-hover-border-left:                4px solid #15597e !default;
+$tool-menu-item-selected-hover-border-left:                4px solid $background-color-secondary !default;
 
 $tool-menu-collapse-text-color:                            #4C4C4C !default;
-$tool-menu-collapse-background-color:                      #FAFAFA !default;
+$tool-menu-collapse-background-color:                      $btn-color-um !default;
 $tool-menu-collapse-border-top:                            none !default;
-$tool-menu-collapse-shadow:                                0 -1px 3px rgba(0,0,0,0.3) !default;
+$tool-menu-collapse-shadow:                                none !default;
 $tool-menu-collapse-hover-text-color:                      #191919 !default;
 $tool-menu-collapse-hover-background-color:                #FAFAFA !default;
 $tool-menu-collapse-hover-border-top:                      none !default;
-$tool-menu-collapse-hover-shadow:                          0 -1px 3px rgba(0,0,0,0.3) !default;
+$tool-menu-collapse-hover-shadow:                          none !default;
 $tool-menu-collapse-active-text-color:                     #FFFFFF !default;
-$tool-menu-collapse-active-background-color:               #15597e !default;
+$tool-menu-collapse-active-background-color:               $btn-color-um !default;
 $tool-menu-collapse-active-icon-color:                     $tool-menu-collapse-active-text-color !default;
 $tool-menu-collapse-active-border-top:                     none !default;
-$tool-menu-collapse-active-shadow:                         0 -1px 3px rgba(0,0,0,0.3) !default;
+$tool-menu-collapse-active-shadow:                         none !default;
 $tool-menu-collapse-active-hover-text-color:               #FFFFFF !default;
-$tool-menu-collapse-active-hover-background-color:         #15597e !default;
+$tool-menu-collapse-active-hover-background-color:         $btn-color-um !default;
 $tool-menu-collapse-active-hover-border-top:               none !default;
-$tool-menu-collapse-active-hover-shadow:                   0 -1px 3px rgba(0,0,0,0.3) !default;
+$tool-menu-collapse-active-hover-shadow:                   none !default;
 
 /* Tool sub menu */
 $tool-sub-menu-border-color: darken( $tool-menu-background-color, 10% ) !default;
@@ -358,12 +376,12 @@ $col1of2-width: 48% !default;
 $col2of2-width: 48% !default;
 
 /* From NYU 11 Skin */
-$divider-shadow: 0 1px 5px rgba(0,0,0,.3) !default;
+$divider-shadow: none !default;
 $overview-portlet-border-color: $tool-border-color !default;
-$overview-portlet-shadow: 1px 1px 5px rgba(0,0,0,0.2) !default;
+$overview-portlet-shadow: none !default;
 $overview-portlet-title-background-color: $tool-tab-background-color !default;
 
 $instruction-color: #5c5c5c !default;
 $instruction-background-color: #fff !default;
 
-@import url(#{$font-family-url});
+// @import url(#{$font-family-url});

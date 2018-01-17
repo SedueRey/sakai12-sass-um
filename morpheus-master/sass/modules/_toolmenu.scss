@@ -290,6 +290,7 @@ nav#subSites{
 	ul{
 		padding: 0;
 		margin:  0;
+		list-style: none;
 		li{
 			border-bottom: 1px solid $tool-menu-item-separator-color;
 
@@ -915,4 +916,8 @@ body {
 			}
 		}
 	}
+}
+
+#toolsNav-toggle-li {
+	left: $umu-sitenav-width !important;
 }

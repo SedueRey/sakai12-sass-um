@@ -18,6 +18,11 @@ body.is-logged-out{
 .#{$namespace}mainHeader{
 		box-shadow: $divider-shadow;
 		position: relative;
+		@media #{$nonPhone} {
+			position: absolute;
+			right: 0;
+			z-index: 5;
+		}
 
 	.#{$namespace}headerLogo{
 		width: 100%;
@@ -25,10 +30,11 @@ body.is-logged-out{
 		padding: 0 1em;
 		height: $banner-height;
 		background: $top-header-background;
-
+		
 		text-align: center;
 		@include transition( width 0.5s linear 0s );
 		.#{$namespace}headerLogo--institution{
+			display: none;
 			background: url($logo) no-repeat center center;
 			width: 		$logo-width;
 			height: 100%; // align vertically center
@@ -73,7 +79,18 @@ body.is-logged-out{
 			@media #{$phone}{
 				display: none;
 			}
+			position: fixed;
+			left: -17rem;
+			//left: 0;
+			top: 0;
+			width: $umu-sitenav-width;
+			bottom: 0;
 			background: $sites-nav-background;
+			transition: left 0.35s ease-out;
+			cursor: pointer;
+			&:hover {
+				left: 0;
+			}
 		}
 	}
 
@@ -765,7 +782,7 @@ body.is-logged-out{
 	padding-left: 0.5em;
 	background-color: $sites-nav-background;
 	min-height: 52px;
-	padding: 4px 8px;
+	padding: 0 0 0 0;
 }
 
 #linkNav{
@@ -776,7 +793,7 @@ body.is-logged-out{
 		margin: 0.5em 0 0 0;
 		padding: 0;
 		li.#{$namespace}sitesNav__menuitem{
-			margin: 0 0.5em 0.5em 0;
+			margin: 0 0 0 0;
 			padding: 0;
 			position: relative;
 			border-top: $sites-nav-menu-item-border-top;
@@ -784,15 +801,21 @@ body.is-logged-out{
 			border-bottom: $sites-nav-menu-item-border-bottom;
 			border-left: $sites-nav-menu-item-border-left;
 			background: $sites-nav-menu-item-background;
+			order: 1;
+			transition: background 0.2s ease-out;
 
 			> a.link-container{
-				@include display-flex( flex );
-				@include align-items( center );
-
+				//@include display-flex( flex );
+				//@include align-items( center );
+				display: block;
 				padding: 0.5em 36px 0.5em 0.5em;
 				color: $sites-nav-menu-item-color;
 				text-decoration: none;
-
+				width: 19.8rem;
+				overflow: hidden;
+				font-size: 12px;
+				text-transform: uppercase;
+				letter-spacing: 0.04em;
 				i.fa {
 					color: $sites-nav-menu-item-icon-color;
 				}
@@ -919,6 +942,9 @@ body.is-logged-out{
 				border-right: $sites-nav-menu-item-selected-border-right;
 				border-bottom: $sites-nav-menu-item-selected-border-bottom;
 				border-left: $sites-nav-menu-item-selected-border-left;
+				//margin: -0.7em 0 0.6em -0.6em;
+				order: 0;
+				//width: 20rem;
 
 				a.link-container{
 					color: $sites-nav-menu-item-selected-color;

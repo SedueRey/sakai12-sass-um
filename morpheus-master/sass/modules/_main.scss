@@ -20,7 +20,9 @@
 	@include align-items(stretch);
 	@include display-flex(flex);
 	@include flex-direction(row);
+	margin-left: 3rem;
 	> .#{$namespace}pagebody{
+		padding-top: 5rem;
 		width: 100%;
 	}
 }
