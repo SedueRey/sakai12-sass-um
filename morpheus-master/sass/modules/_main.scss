@@ -21,6 +21,7 @@
 	@include display-flex(flex);
 	@include flex-direction(row);
 	margin-left: 3rem;
+	transition: margin-left 0.35s ease-out;
 	> .#{$namespace}pagebody{
 		padding-top: 5rem;
 		width: 100%;

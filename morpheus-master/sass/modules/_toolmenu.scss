@@ -23,6 +23,7 @@ body.is-logged-out{
 		padding: 0;
 		width: 100%;
 		text-align: right;
+		outline: 0;
 	}
 
 	// LHS tool menu collapsed to show icons only and not tool titles.
@@ -177,12 +178,15 @@ body.is-logged-out{
 	#toolMenu {
 		position: relative;
 	}
-	background: $tool-menu-background-color;
+	background-color: $tool-menu-background-color;
+	background-image: url('images/logosimbolo-grey.png');
+	background-repeat: no-repeat;
+	background-position: center 80%;
 	display: block;
 	min-width: $tool-menu-width;
 	width: $tool-menu-width;
 	@include flex-basis( $tool-menu-width );
-	padding: 5px 0 0 0;
+	padding: 0 0 0 0;
 	text-align: center;
 	border-right: 1px solid $tool-border-color;
 	@include transition( left 0.25s linear 0s );
@@ -304,6 +308,7 @@ nav#subSites{
 				cursor:pointer;
 				font-size: 1.2em;
 				z-index: 1;
+				margin-left: 3rem;
 
 				color: $tool-menu-collapse-text-color;
 				border-top: $tool-menu-collapse-border-top;
@@ -916,8 +921,4 @@ body {
 			}
 		}
 	}
-}
-
-#toolsNav-toggle-li {
-	left: $umu-sitenav-width !important;
 }

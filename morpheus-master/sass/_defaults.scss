@@ -57,7 +57,7 @@ $alt-colour: 				 #d36f00 !default;
 
 $text-color:				 #212121 !default;
 
-$btn-color-um: #7cacbc;
+$btn-color-um: #3d839a;
 $umu-sitenav-width: 20rem;
 
 $body-background-color: #FAFAFA !default;
@@ -93,8 +93,8 @@ $top-header-background: $background-color-secondary !default;
 $sites-nav-background: $background-color-secondary !default;
 
 $breadcrumbs-color:			 $text-color !default;
-$breadcrumbs-tool-color:		 #265b81 !default;
-$breadcrumbs-hover-color:		 #265b81 !default;
+$breadcrumbs-tool-color:     $background-color-secondary !default;
+$breadcrumbs-hover-color:    darken($background-color-secondary, 10%)!default;
 
 /* Link colors */
 $link-color: $primary-color !default;
@@ -185,7 +185,7 @@ $sites-nav-menu-item-selected-icon-color:   #FFFFFF !default;
 $sites-nav-menu-item-selected-border-color: darken($btn-color-um, 10%) !default;
 $sites-nav-menu-item-selected-border-top:   1px solid #772d2d !default;
 $sites-nav-menu-item-selected-border-right: 1px solid #772d2d !default;
-$sites-nav-menu-item-selected-border-bottom:1px solid #772d2d !default;
+$sites-nav-menu-item-selected-border-bottom:2px solid #772d2d !default;
 $sites-nav-menu-item-selected-border-left : 1px solid #772d2d !default;
 /* Favorites - item selected and hovered */
 $sites-nav-menu-item-selected-hover-background:   $btn-color-um !default;
@@ -316,20 +316,20 @@ $tool-menu-item-selected-hover-background-color:           #FFFFFF !default;
 $tool-menu-item-selected-hover-border-left:                4px solid $background-color-secondary !default;
 
 $tool-menu-collapse-text-color:                            #4C4C4C !default;
-$tool-menu-collapse-background-color:                      $btn-color-um !default;
+$tool-menu-collapse-background-color:                      #E0E0E0 !default;
 $tool-menu-collapse-border-top:                            none !default;
 $tool-menu-collapse-shadow:                                none !default;
 $tool-menu-collapse-hover-text-color:                      #191919 !default;
-$tool-menu-collapse-hover-background-color:                #FAFAFA !default;
+$tool-menu-collapse-hover-background-color :               darken(#E0E0E0, 5%) !default;
 $tool-menu-collapse-hover-border-top:                      none !default;
 $tool-menu-collapse-hover-shadow:                          none !default;
-$tool-menu-collapse-active-text-color:                     #FFFFFF !default;
-$tool-menu-collapse-active-background-color:               $btn-color-um !default;
+$tool-menu-collapse-active-text-color:                     #4C4C4C !default;
+$tool-menu-collapse-active-background-color:               #E0E0E0 !default;
 $tool-menu-collapse-active-icon-color:                     $tool-menu-collapse-active-text-color !default;
 $tool-menu-collapse-active-border-top:                     none !default;
 $tool-menu-collapse-active-shadow:                         none !default;
 $tool-menu-collapse-active-hover-text-color:               #FFFFFF !default;
-$tool-menu-collapse-active-hover-background-color:         $btn-color-um !default;
+$tool-menu-collapse-active-hover-background-color:         #E0E0E0 !default;
 $tool-menu-collapse-active-hover-border-top:               none !default;
 $tool-menu-collapse-active-hover-shadow:                   none !default;
 
@@ -381,7 +381,7 @@ $overview-portlet-border-color: $tool-border-color !default;
 $overview-portlet-shadow: none !default;
 $overview-portlet-title-background-color: $tool-tab-background-color !default;
 
-$instruction-color: #5c5c5c !default;
-$instruction-background-color: #fff !default;
+$instruction-color: #92B3B8 !default;
+$instruction-background-color: #f0f6f7 !default;
 
 // @import url(#{$font-family-url});

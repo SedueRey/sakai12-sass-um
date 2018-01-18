@@ -79,17 +79,62 @@ body.is-logged-out{
 			@media #{$phone}{
 				display: none;
 			}
-			position: fixed;
-			left: -17rem;
-			//left: 0;
-			top: 0;
-			width: $umu-sitenav-width;
-			bottom: 0;
-			background: $sites-nav-background;
-			transition: left 0.35s ease-out;
-			cursor: pointer;
-			&:hover {
-				left: 0;
+			@media #{$nonPhone}{
+				position: fixed;
+				left: -17rem;
+				top: 0;
+				width: $umu-sitenav-width;
+				bottom: 0;
+				background-color: $sites-nav-background;
+				background-image: url('images/logosimbolo-blanco.png');
+				background-repeat: no-repeat;
+				background-position: center 98%;
+				transition: left 0.35s ease-out;
+				cursor: pointer;
+				z-index: 99;
+				&:after {
+					content: "\00BB";
+					z-index: 99;
+					position: fixed;
+					top: 0;
+					left: 0;
+					width: 3rem;
+					height: 4rem;
+					color: #FFFFFF;
+					background-color: $sites-nav-menu-item-hover-border-color;
+					border-bottom: 1px solid $sites-nav-menu-item-hover-border-color;
+					font-size: 2.5rem;
+					opacity: 1;
+					transition: all 0.35s ease-out;
+					line-height: 1.3;
+					text-align: center;
+				}
+				> .#{$namespace}sitesNav {
+					position: relative;
+					right: 3rem;
+					transition: right 0.35s ease-out;
+					.dropdown-is-visible {
+						.#{$namespace}sitesNav__submenu.is-visible {
+							display: none !important;
+						}
+					}
+				}
+				&:hover {
+					left: 0;
+					&:after{
+						left: 17rem;
+						opacity: 0;
+					}
+					>.#{$namespace}sitesNav {
+						position: relative;
+						right: 0;
+					}
+					.dropdown-is-visible {
+						.#{$namespace}sitesNav__submenu.is-visible {
+							display: block !important;
+						}
+					}
+				}
 			}
 		}
 	}
@@ -114,6 +159,44 @@ body.is-logged-out{
 		top: 0;
 		width: 100%;
 		z-index: 20;
+	}
+}
+
+body.js-home-workspace {
+	.#{$namespace}mainHeader {
+		&.is-maximized {
+			.siteNavWrap {
+				@media #{$phone} {
+					display: none;
+				}
+				@media #{$nonPhone} {
+					&:after {
+						left: 17rem;
+						opacity: 0;
+					}
+					cursor: default;
+					left: 0;
+					position: fixed;
+					>.#{$namespace}sitesNav {
+						right: 0;
+					}
+					.Mrphs-sitesNav__submenu.is-visible {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+	@media #{$nonPhone} {
+		.#{$namespace}siteHierarchy .#{$namespace}hierarchy--siteName {
+			left: 39.5rem;
+		}
+	}
+	#pageBody { 
+		margin-left: $umu-sitenav-width;
+	}
+	#toolsNav-toggle-li {
+		left: 17rem !important;
 	}
 }
 
@@ -790,7 +873,7 @@ body.is-logged-out{
 		@include display-flex(flex);
 		@include flex-wrap( wrap );
 		font-family: $header-font-family;
-		margin: 0.5em 0 0 0;
+		margin: 0 0 0 0;
 		padding: 0;
 		li.#{$namespace}sitesNav__menuitem{
 			margin: 0 0 0 0;
@@ -808,7 +891,8 @@ body.is-logged-out{
 				//@include display-flex( flex );
 				//@include align-items( center );
 				display: block;
-				padding: 0.5em 36px 0.5em 0.5em;
+				//padding: 0.5em 36px 0.5em 0.5em;
+				padding: 0.85em 36px 0.85em 0.5em;
 				color: $sites-nav-menu-item-color;
 				text-decoration: none;
 				width: 19.8rem;
@@ -930,6 +1014,7 @@ body.is-logged-out{
 				}
 				&.is-visible{
 					display: block;
+					z-index: 99;
 				}
 				&.is-hidden{
 					display: none;
@@ -1002,7 +1087,8 @@ body.is-logged-out{
 				}
 
 				a{
-					padding: 0.5em;
+					//padding: 0.5em;
+					padding: 0.85em 0.5em 0.85em 0.5em;
 
 					i{
 						margin-top: 1px; /* to compensate for an issue with the icon */
@@ -1087,7 +1173,7 @@ body.is-logged-out{
 	height: 100%;
 	position: fixed;
 	width: 100%;
-	z-index: 20;
+	z-index: 5;
 }
 
 body.is-logged-out{
@@ -1170,7 +1256,7 @@ body.is-logged-out{
 	height: 100%;
 	position: fixed;
 	width: 100%;
-	z-index: 20;
+	z-index: 5;
 }
 
 #profileImageUpload {
