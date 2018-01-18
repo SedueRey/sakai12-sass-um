@@ -87,8 +87,9 @@ body.is-logged-out{
 				bottom: 0;
 				background-color: $sites-nav-background;
 				background-image: url('images/logosimbolo-blanco.png');
-				background-repeat: no-repeat;
 				background-position: center 98%;
+				background-repeat: no-repeat;
+				background-size: 120px;
 				transition: left 0.35s ease-out;
 				cursor: pointer;
 				z-index: 99;
