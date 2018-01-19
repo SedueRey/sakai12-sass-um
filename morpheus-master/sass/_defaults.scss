@@ -58,6 +58,7 @@ $alt-colour: 				 #d36f00 !default;
 $text-color:				 #212121 !default;
 
 $btn-color-um: #3d839a;
+$um-primary-color: #772d2d;
 $umu-sitenav-width: 20rem;
 
 $body-background-color: #FAFAFA !default;
@@ -167,26 +168,26 @@ $sites-nav-menu-item-icon-color:            #F0F0F0 !default;
 $sites-nav-menu-item-border-color:          $background-color-secondary !default;
 $sites-nav-menu-item-border-top:            0px none !default;
 $sites-nav-menu-item-border-right :         0px none !default;
-$sites-nav-menu-item-border-bottom :        1px solid #772d2d !default;
+$sites-nav-menu-item-border-bottom :        1px solid $um-primary-color !default;
 $sites-nav-menu-item-border-left :          0px none !default;
 /* Favorites - item hovered */
-$sites-nav-menu-item-hover-background :     #772d2d !default;
+$sites-nav-menu-item-hover-background :     $um-primary-color !default;
 $sites-nav-menu-item-hover-color:           #F0F0F0 !default;
 $sites-nav-menu-item-hover-icon-color:      #F0F0F0 !default;
-$sites-nav-menu-item-hover-border-color :   #772d2d !default;
+$sites-nav-menu-item-hover-border-color :   $um-primary-color !default;
 $sites-nav-menu-item-hover-border-top:      0px none$sites-nav-menu-item-hover-border-color !default;
 $sites-nav-menu-item-hover-border-right:    $sites-nav-menu-item-hover-border-top !default;
-$sites-nav-menu-item-hover-border-bottom:   1px solid #772D2D !default;
+$sites-nav-menu-item-hover-border-bottom:   1px solid $um-primary-color !default;
 $sites-nav-menu-item-hover-border-left:     $sites-nav-menu-item-hover-border-top !default;
 /* Favorites - item selected */
-$sites-nav-menu-item-selected-background:   #772d2d !default;
+$sites-nav-menu-item-selected-background:   $um-primary-color !default;
 $sites-nav-menu-item-selected-color:        #FFFFFF !default;
 $sites-nav-menu-item-selected-icon-color:   #FFFFFF !default;
 $sites-nav-menu-item-selected-border-color: darken($btn-color-um, 10%) !default;
-$sites-nav-menu-item-selected-border-top:   1px solid #772d2d !default;
-$sites-nav-menu-item-selected-border-right: 1px solid #772d2d !default;
-$sites-nav-menu-item-selected-border-bottom:2px solid #772d2d !default;
-$sites-nav-menu-item-selected-border-left : 1px solid #772d2d !default;
+$sites-nav-menu-item-selected-border-top:   1px solid $um-primary-color !default;
+$sites-nav-menu-item-selected-border-right: 1px solid $um-primary-color !default;
+$sites-nav-menu-item-selected-border-bottom:2px solid $um-primary-color !default;
+$sites-nav-menu-item-selected-border-left : 1px solid $um-primary-color !default;
 /* Favorites - item selected and hovered */
 $sites-nav-menu-item-selected-hover-background:   $btn-color-um !default;
 $sites-nav-menu-item-selected-hover-color:        #FFFFFF !default;

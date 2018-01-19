@@ -511,10 +511,13 @@
 			&__users {
 				border-top: solid 0.5em $footerApp__chat__header__background;
 			}
-			&__close{
+			&__close[href]{
 				float: right;
 				text-align: right;
-				color: inherit;
+				color: #FFF;
+				&:hover {
+					color: #D0D0D0;
+				}
 			}
 			&__siteusers,&__connections{
 				a{
