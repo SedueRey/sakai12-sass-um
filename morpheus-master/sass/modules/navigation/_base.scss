@@ -30,12 +30,21 @@ body.is-logged-out{
 		padding: 0 1em;
 		height: $banner-height;
 		background: $top-header-background;
+		@media #{$phone} {
+			background: darken($top-header-background, 30%);
+		}
 		
 		text-align: center;
 		@include transition( width 0.5s linear 0s );
 		.#{$namespace}headerLogo--institution{
-			display: none;
-			background: url($logo) no-repeat center center;
+			@media #{$nonPhone}{
+				display: none;
+			}
+			@media #{$phone}{
+				position: relative;
+				left: -1em;
+			}
+			background: url($logo) no-repeat center right;
 			width: 		$logo-width;
 			height: 100%; // align vertically center
 			float: left;
@@ -192,12 +201,12 @@ body.js-home-workspace {
 		.#{$namespace}siteHierarchy .#{$namespace}hierarchy--siteName {
 			left: 39.5rem;
 		}
-	}
-	#pageBody { 
-		margin-left: $umu-sitenav-width;
-	}
-	#toolsNav-toggle-li {
-		left: 17rem !important;
+		#pageBody { 
+			margin-left: $umu-sitenav-width;
+		}
+		#toolsNav-toggle-li {
+			left: 17rem !important;
+		}
 	}
 }
 
@@ -309,6 +318,10 @@ body.js-home-workspace {
 	height: auto;
 	width: 100%;
 	box-shadow: $divider-shadow;
+	
+	@media #{$phone}{
+		background: darken($top-header-background, 30%);
+	}
 
 	a
 	{

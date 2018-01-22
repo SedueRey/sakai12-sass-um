@@ -105,6 +105,35 @@
 	}
 }
 
+.Mrphs-sakai-resources,
+.Mrphs-sakai-forums,
+.Mrphs-sakai-siteinfo,
+.Mrphs-sakai-sitestats,
+.Mrphs-sakai-messages {
+	.navIntraTool {
+		li span {
+			a {
+				@include sakai_secondary_button();
+				&:hover {
+					border-top: 1px solid $button-primary-hover-border-color;
+				}
+				&:before{
+					display: none;
+				}
+			}
+			&.current {
+				@include sakai_button_color( $button-color-background-color, $button-color-border-color, $button-color-text-color, $button-color-background-secondary-color);
+				&:before {
+					display: none;
+				}
+				&:after {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
 .instruction{
 	@include bs-callout($instruction-color, $instruction-background-color);
 }

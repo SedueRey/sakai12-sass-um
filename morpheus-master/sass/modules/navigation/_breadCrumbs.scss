@@ -121,9 +121,9 @@
 		top: $banner-height - 4;
 		height: $banner-height - 4;
 		line-height: $banner-height - 4;
-		width: calc(100% - 80px); // leave space for the Tool menu toggle
+		width: calc(100% - 125px); // leave space for the Tool menu toggle
 		white-space: nowrap;
-		left: 80px;
+		left: 125px;
 
 		h1{
 			color: $breadcrumbs-tool-color;
@@ -150,7 +150,7 @@
 			position: absolute;
 			top: - ($banner-height - 4);
 			height: $banner-height - 4;
-			left: -80px;
+			left: -125px;
 			padding: 0 10px;
 			line-height: $banner-height - 4;
 			overflow: hidden;
