@@ -1,0 +1,329 @@
+.#{$namespace}toolTitleNav {
+    display: none;
+}
+
+#skipNav,
+#show-all-sites,
+.#{$namespace}siteHierarchy {
+    display: none;
+}
+
+.#{$namespace}portalWrapper {
+    background: $background-color;
+    margin: 0 0 0 0;
+    padding: 0;
+    h1 {
+        font-size: 32px;
+    }
+    h2 {
+        font-size: 24px;
+        color: #525252;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    @media #{$tablet} {
+       /* margin: 0 0 0 400px;
+        padding: 120px 30px 60px 30px;*/
+    }
+    @media #{$phone} {
+        /*padding: 16px 16px 16px 16px;
+        margin: 100% 0 0 0;
+        z-index: 99;
+        &:before {
+            content: " ";
+            background: url("images/double-arrow.png") no-repeat top left;
+            background-size: 100%;
+            height: 50px;
+            left: calc( 50% - 25px);
+            bottom: 8px;
+            margin: -75px 0 0 0;
+            position: absolute;
+            width: 50px;
+            z-index: 99;
+        }*/
+    }
+}
+
+#content {
+    padding: 60px 60px 60px 60px;
+    margin: 0 auto;
+    max-width: 1100px;
+    @media #{$phone} {
+        padding: 24px 24px 24px 24px;
+        max-width: calc(100% - 48px);
+    }
+}
+
+.Mrphs-toolBody--sakai-iframe-service {
+    width: 100%;
+    padding: 0 !important;
+    height: 600px
+}
+
+.Mrphs-container--footer {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0px 60px 0px 60px;
+    ul { 
+        list-style: none;
+    }
+    @media #{$phone} {
+        padding: 24px 24px 24px 24px;
+    }
+}
+
+#topnav_container {
+    position: absolute;
+    top: 60px;
+    left: 84px;
+    @media #{$tablet} {
+        left: 30px;
+    }
+    @media #{$phone} {
+       /* position: absolute;
+        top: 16px;
+        left: 16px;*/
+    }
+    li {
+        display: inline-block;
+        margin: 0 1em 0 0;
+        @media #{$phone} {
+            display: block;
+        }
+    }
+    a[href] {
+        color: #FFF;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:hover {
+            color: #F0F0F0;
+        }
+    }
+}
+
+body.#{$namespace}portalBody.is-logged-out:before {
+    content: "Aula Virtual";
+    color: #FFF;
+    position: absolute;
+    top: 130px;
+    left: 85px;
+    font-size: 54px;
+    font-family: $header-font-family;
+    @media #{$tablet} {
+        //left: 30px;
+    }
+    @media #{$phone} {
+        /*font-size: 48px;
+        position: absolute;
+        top: 33%;
+        left: calc( 50% - 139px);*/
+        left: 1rem;
+        top: 1rem;
+        font-size: 32px;
+    }
+}
+
+body.#{$namespace}portalBody.is-logged-out:after {
+    content: "Universidad de Murcia";
+    color: #FFF;
+    position: absolute;
+    top: 190px;
+    left: 82px;
+    font-size: 28px;
+    font-family: $header-font-family;
+    @media #{$tablet} {
+        left: 27px;
+    }
+    @media #{$phone} {
+        font-size: 24.7px;
+        position: absolute;
+        top: 5rem;
+        left: 1rem;
+    }
+}
+
+#toolsNav-toggle-li {
+    display: none !important;
+}
+
+#loginLinksImage {
+    position: absolute;
+    top: 55px;
+    right: 16px;
+    z-index: 2;
+    @media #{$phone} {
+        position: absolute;
+        right: 24px;
+        text-align: right;
+        width: calc(50% - 24px);
+        top: 125px;
+    }
+    p {
+        display: inline-block;
+        margin: 0 0 0 0.5em;
+    }
+}
+
+#loginLinks {
+    list-style: none;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+#loginLink1 {
+    background-color: #702423;
+    border-radius: 4px;
+    border: 1px solid #702423;
+    color: #FFF;
+    display: inline-block;
+    line-height: 1;
+    overflow: hidden;
+    font-size: 13px;
+    padding: 10px 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 133px;
+    white-space: nowrap;
+    text-decoration: none;
+    &:hover {
+        color: #F0F0F0;
+    }
+}
+
+#loginLink2 {
+    background-color: #ebebeb;
+    border-radius: 4px;
+    border: 1px solid #e2e2e2;
+    color: #636363;
+    display: inline-block;
+    line-height: 1;
+    overflow: hidden;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 13px;
+    text-transform: uppercase;
+    width: 133px;
+    white-space: nowrap;
+    text-decoration: none;
+    @media #{$phone} {
+        /*background-color: transparent;
+        border: 1px solid #FFF;
+        color: #FFF;
+        &:hover {
+            color: #FFF;
+        }*/
+    }
+    &:hover {
+        color: #454545;
+    }
+}
+
+#toolMenu {
+    margin-right: 28%;
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+    padding: 60px 0 20px 30px;
+    width: 72%;
+    text-align: right;
+    ul {
+        list-style: none;
+    }
+    &.scrolled {
+        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+    }
+    @media #{$tablet} {
+        margin-left: -30px;
+        padding: 60px 0 20px 20px;
+    }
+    @media #{$phone} {
+       text-align: left;
+       width: 50%;
+        padding-top: 110px;
+        padding-left: 16px;
+       .Mrphs-toolsNav__menuitem--help {
+          display: none;
+       }
+    }
+    ul {
+        li {
+            display: inline-block;
+            margin: 0 0 0 0;
+            line-height: 1;
+            border-right: 1px solid #FFF;
+            @media #{$phone} {
+                border-right: 0px none;
+                display: block;
+                margin: 1em 0;
+            }
+            &.js-toggle-nav {
+                display: none;
+            }
+            &:last-child {
+                border-right: 0px none;
+            }
+            .Mrphs-toolsNav__menuitem--icon {
+                display: none;
+            }
+            a[href] {
+                text-transform: uppercase;
+                text-decoration: none;
+                padding: 0 2em;
+                line-height: 1;
+                color: #FFF;
+                @media #{$tablet} {
+                    padding: 0 1em;
+                }
+                @media #{$phone} {
+                    padding: 0 0 0 0;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    font-size: 0.75em;
+}
+
+#footer-links {
+    li {
+        display: inline-block;
+        margin: 0 1em 0 0;
+    }
+}
+
+.row {
+    img {
+        max-width: 100%;
+        margin: 1em 0 0 0;
+        @media #{$phone} {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+
+.Mrphs-mainHeader {
+    background: #843838;
+    color :#FFF;
+    /* Old browsers */
+
+    background: -moz-linear-gradient(left, #843838 0%, #b0695a 100%);
+    /* FF3.6-15 */
+
+    background: -webkit-linear-gradient(left, #843838 0%, #b0695a 100%);
+    /* Chrome10-25,Safari5.1-6 */
+
+    background: linear-gradient(to right, #843838 0%, #b0695a 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#843838', endColorstr='#b0695a', GradientType=1);
+    /* IE6-9 */
+    height: 37rem;
+    a[href] {
+        color :#FFF;
+    }
+}
