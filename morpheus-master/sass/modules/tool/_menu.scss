@@ -1,21 +1,20 @@
-.navIntraTool{
+.navIntraTool {
 	margin: -14px -14px 0 -14px;
 	border-bottom: 1px solid $tool-border-color;
-	padding: 0 1em 0 0;
-	//max-width: calc(100% - 170px);
+	padding: 0 1em 0 0; //max-width: calc(100% - 170px);
 	font-size: 0;
-	&:after{
+	&:after {
 		content: " ";
 		display: block;
 		width: 100%;
 	}
-	li{
+	li {
 		display: inline-block;
 		font-size: $default-font-size;
 		margin: 0 -1px 0 0;
-		span{
+		span {
 			display: inline;
-			a{
+			a {
 				background: $tool-tab-background-color;
 				border-top: 1px solid $tool-tab-border-color;
 				border-left: 1px solid $tool-tab-border-color;
@@ -31,14 +30,12 @@
 				text-decoration: none;
 				text-transform: $tool-tab-text-transform;
 				letter-spacing: $tool-tab-text-letter-spacing;
-
-				&:hover{
+				&:hover {
 					color: $tool-tab-hover-text-color;
 					background: $tool-tab-hover-background-color;
 					text-decoration: none;
 					position: relative;
-
-					&:before{
+					&:before {
 						border-top: 4px solid $tool-tab-hover-highlight-color;
 						content: "";
 						display: block;
@@ -47,9 +44,9 @@
 						right: -1px;
 						top: -1px;
 					}
-			  }
+				}
 			}
-			&.current{
+			&.current {
 				color: $tool-tab-active-text-color;
 				font-size: $tool-tab-active-text-size;
 				background-color: $tool-tab-active-background-color;
@@ -63,7 +60,6 @@
 				height: $tool-tab-height;
 				display: block;
 				margin-bottom: -1px;
-
 				&:before {
 					border-top: 4px solid $tool-tab-active-highlight-color;
 					content: "";
@@ -73,7 +69,7 @@
 					right: -1px;
 					top: -1px;
 				}
-				&:after{
+				&:after {
 					border-bottom: 1px solid $tool-tab-active-background-color;
 					content: '';
 					display: block;
@@ -82,26 +78,22 @@
 					right: 0;
 					bottom: -1px;
 				}
-				a{
-				    border: 0px none;
-				    font-size: 1em;
-				    margin: 0;
-				    padding: 0;
-				    top: 1px;
+				a {
+					border: 0px none;
+					font-size: 1em;
+					margin: 0;
+					padding: 0;
+					top: 1px;
 				}
 			}
-			&.inactive{
+			&.inactive {
 				border-left: 0px none;
 			}
 		}
-		a{
-
-			&.current{
-			}
+		a {
+			&.current {}
 		}
-		.searchField{
-
-		}
+		.searchField {}
 	}
 }
 
@@ -117,7 +109,7 @@
 				&:hover {
 					border-top: 1px solid $button-primary-hover-border-color;
 				}
-				&:before{
+				&:before {
 					display: none;
 				}
 			}
@@ -134,49 +126,45 @@
 	}
 }
 
-.instruction{
+.instruction {
 	@include bs-callout($instruction-color, $instruction-background-color);
 }
 
-.listNav{
+.listNav {
 	margin: 1em 0;
-	.inlineForm{
+	.inlineForm {
 		display: inline-block;
-		@media #{$phone}{
+		@media #{$phone} {
 			padding: 0.1em !important;
-			&[name="pagesizeForm"]{
+			&[name="pagesizeForm"] {
 				text-align: center;
 			}
-			select{
+			select {
 				width: 100%;
 			}
-			input[type="submit"]{
+			input[type="submit"] {
 				margin: 0 0 0 0;
-				&[disabled="disabled"]{
+				&[disabled="disabled"] {
 					display: none;
 				}
 			}
 		}
-		legend{
+		legend {
 			display: none;
 		}
-
-		fieldset{
-			display:inline-block;
+		fieldset {
+			display: inline-block;
 		}
 	}
 }
 
-.viewNav{
-
-}
+.viewNav {}
 
 .navPanel {
 	.floatLeft {
 		float: left;
 		padding: 1em;
 	}
-
 	.floatRight {
 		float: right;
 	}

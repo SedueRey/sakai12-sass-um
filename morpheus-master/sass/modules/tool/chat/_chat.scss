@@ -511,12 +511,12 @@
 			&__users {
 				border-top: solid 0.5em $footerApp__chat__header__background;
 			}
-			&__close[href]{
+			&__close{
 				float: right;
 				text-align: right;
 				color: #FFF;
-				&:hover {
-					color: #D0D0D0;
+				&[href]{
+					color: #FFF;
 				}
 			}
 			&__siteusers,&__connections{
@@ -829,8 +829,11 @@
 					  color: $footerApp__chat__header__color;
 					  background-color: #000;
 					  .Mrphs-footerApp--icon {
-					  	font-size: 3em;
-					  	padding-top: 10px;
+						  font-size: 3em;
+						  padding-top: 10px;
+						  &[href] {
+							color: #FFF;
+						  }
 					  }
 				}
 				

@@ -1,11 +1,40 @@
 .#{$namespace}sakai-dropbox {
     .recentItem{
         padding: 2px;
-        background: url(/library/image/sakai/new_item_back.gif) top right no-repeat;
+        position: relative;
+        &::after{
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 16px;
+            background-color: yellow;
+            z-index: 1;
+            margin: -2px 0 0 -5px;
+            position: absolute;
+            border: 1px solid rgba(#de9613, 0.5);
+        }
     }
 
-    .recentItemInstruction{
+    .recentItemInstruction {
         padding: 0 5px;
-        background: url(/library/image/sakai/new_item_back_inst.png) center left no-repeat;
+        position: relative;
+        &::after {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 16px;
+            background-color: yellow;
+            z-index: 1;
+            margin: 8px 0 0 -5px;
+            position: absolute;
+            border: 1px solid rgba(#de9613, 0.5);
+        }
+    }
+
+    .btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle) {
+        border-bottom-right-radius: 3px;
+        border-top-right-radius: 3px;
     }
 }

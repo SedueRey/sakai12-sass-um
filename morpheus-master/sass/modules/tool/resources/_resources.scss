@@ -207,6 +207,34 @@
 		}
 	}
 
+	a.nil.fa-folder {
+		position: static;
+		&::after {
+			color: #fff;
+			content: "+";
+			display: inline-block;
+			position: absolute;
+			margin: 0.4em 0 0 -2.2em;
+			text-align: center;
+			font-size: 11px;
+			font-family: monospace;
+		}
+	}
+
+	a.nil.fa-folder-open {
+		position: static;
+		&::after {
+			color: #FFF;
+			content: "-";
+			display: inline-block;
+			position: absolute;
+			margin: 0.5em 0 0 -2.2em;
+			text-align: center;
+			font-size: 11px;
+			font-family: monospace;
+		}
+	}
+
 	#navigate {
 		margin-right:10px !important;
 		@include border-radius( 3px );
@@ -246,5 +274,9 @@
 		display : inline;
 		color : $primary-color;
 		text-decoration: none;
+	}
+	.btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle) {
+		border-bottom-right-radius: 3px;
+		border-top-right-radius: 3px;
 	}
 }

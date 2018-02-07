@@ -530,7 +530,7 @@ ul.favoriteSiteList{
 		background: $all-sites-button-background-color;
 		border: 1px solid $all-sites-button-border-color;
 		@include border-radius( $all-sites-button-border-radius );
-		width: 305px;
+		max-width: 305px;
 		white-space: nowrap;
 		overflow: hidden;
 		margin: 0.3em;
@@ -560,7 +560,8 @@ ul.favoriteSiteList{
 	}
 
 .fav-title{
-	width: 240px;
+	//width: 240px;
+	width: calc(100% - 64px);
 	overflow: hidden;
 	display: inline-block;
 	vertical-align: middle;
@@ -835,4 +836,8 @@ li.organizeFavorites:not(.active) .favoriteCountAndWarning.maxFavoritesReached {
 			padding: 1em 0 0 0;
 		}
 	}
+}
+
+#footerAppPresence {
+	display: none;
 }

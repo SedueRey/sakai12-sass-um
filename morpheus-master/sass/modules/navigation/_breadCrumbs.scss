@@ -1,8 +1,13 @@
 .#{$namespace}siteHierarchy{
 	background: $tool-background-color;
-	margin-bottom: 1.5rem;
 	min-height: $hierarchy-size;
-
+	padding: 0 0 0.5em 1em;
+	
+	@media #{$nonPhone} {
+		border: 1px solid #C0C0C0;
+		margin: 1.25rem 2.1rem 1.5rem 1.4rem;
+	}
+	
 	h1{
 		color: $background-color;
 		font-weight: 300;
@@ -19,36 +24,22 @@
 	}
 
 	.Mrphs-hierarchy--parent-sites{
-		display: block;
+		@media #{$phone} {
+			display: none;
+		}
 	}
 
 	/* Show the breadcrumbs on multiple rows (when there are parent sites), and use hover animations */
 	@media #{$nonPhone}{
-		.#{$namespace}hierarchy--siteName {
-			position: absolute;
-			//left: 39.5rem;
-			left: 22.5rem;
-			transition: left 0.35s ease-out;
-			z-index: 1;
-			top: 0.9rem;
-			line-height: 1;
-			padding: 0 0 0 0;
-			margin: 0 0 0 0;
-			font-weight: 400;
-			font-size: 2.4rem;
-			a[href]:hover{
-				text-decoration: underline;
-				border-bottom: 0px none;
-				text-shadow: 3px 0 $background-color,
-				2px 0 $background-color,
-				1px 0 $background-color,
-				-1px 0 $background-color,
-				-5px 0 $background-color,
-				-3px 0 $background-color;
-			}
-		} 
+		.#{$namespace}hierarchy--siteName, 
 		.#{$namespace}hierarchy--siteNameSeparator{
-			display: none;
+			font-size: 110%;
+			@media #{$phone} {
+				display: none;
+			}
+		}
+		.#{$namespace}hierarchy--siteName {
+			margin-left: 16px;
 		}
 
 		min-height: initial;
@@ -79,7 +70,7 @@
 			font-size: 110%;
 			font-weight: bold;
 			display: inline-block;
-			margin: 0.75em 0.75em 0.25em 0.6em;
+			margin: 0.75em 0.75em 0.25em 0.55em;
 			border-bottom: 1px solid transparent;
 
 			&:hover{
@@ -102,14 +93,11 @@
 		}
 
 		.Mrphs-hierarchy--parent-sites{
-			display: block;
-			font-size: 90%;
-			font-weight: 200;
-			margin-bottom: 5px;
-			position: absolute;
-			margin: -1.6rem 0rem 0rem 1.6rem;
-			a[href] {
-				color: #999;
+			@media #{$nonPhone} {
+				display: inline-block;
+				font-size: 110%;
+				font-weight: 300;
+				margin-bottom: 0;
 			}
 		}
 	}

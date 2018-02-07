@@ -20,12 +20,7 @@
 	@include align-items(stretch);
 	@include display-flex(flex);
 	@include flex-direction(row);
-	transition: margin-left 0.35s ease-out;
-	@media #{$nonPhone} {
-		margin-left: 3rem;
-	}
 	> .#{$namespace}pagebody{
-		padding-top: 5rem;
 		width: 100%;
 	}
 }

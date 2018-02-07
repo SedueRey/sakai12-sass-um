@@ -2,12 +2,13 @@
 	.#{$namespace}portalWrapper{
 		color: $swapped-view-text-color;
 		&.swapped-view{
-			.#{$namespace}topHeader{
+			filter: grayscale(0.5);
+			#topnav_container {
 				background: $swapped-view-primary;
 			}
 			.#{$namespace}siteHierarchy{
-				background: $background-color-secondary;
-				color: $background-color;
+				//background: red;
+				//color: $background-color;
 				a {
 					color: $background-color;
 				}
